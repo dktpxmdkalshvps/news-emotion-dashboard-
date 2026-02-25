@@ -1,0 +1,18 @@
+# News Sentiment Insight Dashboard - 의존성 패키지
+# 설치 명령: pip install -r requirements.txt
+
+# 핵심 데이터 처리
+pandas>=2.0.0
+numpy>=1.24.0
+
+# 웹 크롤링
+selenium>=4.15.0
+# Chrome 드라이버 자동 관리 (선택사항)
+webdriver-manager>=4.0.0
+
+# 시각화
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# 엑셀 내보내기
+openpyxl>=3.1.0
