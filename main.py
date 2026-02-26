@@ -67,8 +67,13 @@ def run_pipeline(keyword: str, pages_per_site: int = 3,
 
 
 if __name__ == "__main__":
-    KEYWORD        = "삼성전자"
-    PAGES_PER_SITE = 3
-    SITES          = None   # None=전체, 또는 ["naver", "hankyung"] 등
+    import argparse
 
-    run_pipeline(KEYWORD, PAGES_PER_SITE, SITES)
+    parser = argparse.ArgumentParser(description="News Sentiment Insight Dashboard")
+    parser.add_argument("--keyword", "-k", type=str, default="삼성전자", help="Search keyword (default: 삼성전자)")
+    parser.add_argument("--pages", "-p", type=int, default=3, help="Pages per site (default: 3)")
+    parser.add_argument("--sites", "-s", nargs="+", default=None, help="Specific sites to crawl (e.g., naver hankyung)")
+
+    args = parser.parse_args()
+
+    run_pipeline(args.keyword, args.pages, args.sites)
