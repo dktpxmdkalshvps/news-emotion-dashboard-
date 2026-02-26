@@ -302,7 +302,6 @@ class HankyungCrawler(BaseCrawler):
     URL 패턴:
       www.hankyung.com/search?search_str={kw}&page={page}&type=news&sort=date
       └── page: 1페이지=1, 2페이지=2 ...
-
     수집 셀렉터:
       목록  li.item  /  article.list-item
       제목  .news-tit  /  h3.title a  /  a.tit
