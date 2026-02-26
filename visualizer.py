@@ -26,6 +26,8 @@ def _set_korean_font():
         # Linux
         "NanumGothic", "NanumBarunGothic", "Noto Sans CJK KR",
         "Noto Sans KR", "UnDotum",
+        # Fallback / Common Linux
+        "WenQuanYi Zen Hei", "Unifont", "Baekmuk Dotum",
     ]
     available = {f.name for f in fm.fontManager.ttflist}
     for font in font_candidates:
